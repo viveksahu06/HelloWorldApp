@@ -14,6 +14,7 @@ export class AppComponent {
   imgUrl = "assets/images/BL_logo_square_jpg.jpg";
   url = "https://www.bridgelabz.com/";
   userName: string = "";
+  nameError: string="";
 
   ngOnInit(): void {
     this.title = "Hello from BridgeLabz.";
@@ -27,6 +28,11 @@ export class AppComponent {
   onInput(): void {
     console.log("Change event occurred");
     const nameRegex = /^[A-Z][a-zA-Z\s]{2,}$/; 
+    if(nameRegex.test(this.userName)){
+      this.nameError ="";
+      return;
+    }
+    this.nameError ="Name is incorrect"
 }
 
 }
