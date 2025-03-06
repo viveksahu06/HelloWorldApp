@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // ✅ Import FormsModule for ngModel
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-root',
-  standalone: true, // ✅ Correct standalone syntax
-  imports: [RouterOutlet, FormsModule], // ✅ Include FormsModule to use ngModel
+  standalone: true, 
+  imports: [RouterOutlet, FormsModule], 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
